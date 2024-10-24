@@ -1,7 +1,6 @@
 package org.approach.models;
 
 import static org.apache.commons.lang3.Validate.*;
-import java.util.Objects;
 
 public class User {
     private static final int USERNAME_MINIMUM_LENGTH = 4;
@@ -11,7 +10,7 @@ public class User {
     private final String username;
 
     public User(final Long id, final String username) {
-        Objects.requireNonNull(id, "The id must not be null");
+        notNull(id, "The id must not be null");
         notBlank(username);
         final String trimmed = username.trim();
         inclusiveBetween(USERNAME_MINIMUM_LENGTH, USERNAME_MAXIMUM_LENGTH, trimmed.length());
