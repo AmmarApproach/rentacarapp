@@ -1,4 +1,4 @@
-package org.approach;
+package org.approach.resources;
 
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ws.rs.GET;

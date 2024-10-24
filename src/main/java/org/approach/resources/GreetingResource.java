@@ -1,4 +1,4 @@
-package org.approach;
+package org.approach.resources;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
