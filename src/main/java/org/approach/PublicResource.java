@@ -1,5 +1,6 @@
 package org.approach;
 
+import jakarta.annotation.security.PermitAll;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -10,6 +11,7 @@ public class PublicResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
+    @PermitAll
     public String publicResource() {
         return "public";
     }
