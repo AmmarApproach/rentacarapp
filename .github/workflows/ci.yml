@@ -27,6 +27,13 @@ jobs:
       - name: Build
         run: ./mvnw verify -B
 
+      - name: Check token
+        run: echo "Sonar token length ${#SONAR_TOKEN}"
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+
+
       - name: SonarCloud Scan
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
