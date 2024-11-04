@@ -8,6 +8,7 @@ import jakarta.ws.rs.core.MediaType;
 
 @Path("/api/admin")
 public class AdminResource {
+    //admin resources
 
     @GET
     @RolesAllowed("ADMIN")
