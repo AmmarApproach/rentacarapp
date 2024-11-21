@@ -8,6 +8,9 @@ import jakarta.ws.rs.core.MediaType;
 
 @Path("/api/admin")
 public class AdminResource {
+    //admin resources
+    //password=admin123
+    private static final String CONNECTION_STRING = "jdbc:sqlserver://loaclhost:8080;databaseName=db;username=username;password=admin123";
 
     @GET
     @RolesAllowed("ADMIN")
